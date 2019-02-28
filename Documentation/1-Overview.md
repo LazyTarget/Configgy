@@ -22,7 +22,7 @@ using Configgy;
 public class MyConfig: Config, IMyConfig
 {   
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
 }
 

@@ -13,7 +13,7 @@ namespace Configgy.Tests.Cache
         {
             var cache = new DictionaryCache();
 
-            cache.Remove("Not actually something that is in this cache.");
+            cache.Remove("Nothing actually in this cache...");
         }
     }
 }

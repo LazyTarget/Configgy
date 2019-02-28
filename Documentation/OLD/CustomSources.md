@@ -26,7 +26,7 @@ public class MyConfig: Config, IMyConfig
 {
 
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     public MyConfig(string[] commandLine)
@@ -61,7 +61,7 @@ We'll need a simple interface for our bootstrap configuration. This will only co
 
 public interface IMyBootstrapConfig
 {
-    string DatabaseConectionString { get; }
+    string DatabaseConnectionString { get; }
 }
 
 
@@ -108,7 +108,7 @@ public class MyConfig: IMyConfig
 {
 
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     public MyConfig()

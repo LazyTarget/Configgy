@@ -23,7 +23,7 @@ public class MyConfig: Config, IMyConfig
 {   
     [IntValidator(10, 25)]
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
 }
 
@@ -41,7 +41,7 @@ A coercer attribute will change the way the raw value is converted to the type y
 public class MyConfig: Config, IMyConfig
 {   
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     [JsonCoercer]

@@ -31,7 +31,7 @@ using Configgy;
 public class MyConfig: Config, IMyConfig
 {
     public int MaxThingCount { Get<int>(); }        
-    public string DatabaseConectionString { Get<string>(); }        
+    public string DatabaseConnectionString { Get<string>(); }        
     public DateTime WhenToShutdown { Get<DateTime>(); }
     
     public MyConfig(string[] commandLine)
@@ -88,7 +88,7 @@ public class MyConfig: Config, IMyConfig
 {
 
     public int MaxThingCount { get { return Get<int>(); }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     public MyConfig(string[] commandLine)

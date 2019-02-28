@@ -19,7 +19,7 @@ using System;
 public interface IMyConfig
 {   
     int MaxThingCount { get; }        
-    string DatabaseConectionString { get; }        
+    string DatabaseConnectionString { get; }        
     DateTime WhenToShutdown { get; }
 }
 
@@ -36,7 +36,7 @@ using Configgy;
 public class MyConfig: Config, IMyConfig
 {   
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
 }
 
@@ -89,7 +89,7 @@ using System;
 
 public interface IMyLogicConfig
 {   
-    string DatabaseConectionString { get; } 
+    string DatabaseConnectionString { get; } 
 }
 
 
@@ -105,7 +105,7 @@ using Configgy;
 public class MyConfig: Config, IMyDatabaseConfig, IMyLogicConfig
 {   
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
 }
 
@@ -143,7 +143,7 @@ We'll still need need a simple interface for our bootstrap configuration:
 
 public interface IMyBootstrapConfig
 {
-    string DatabaseConectionString { get; }
+    string DatabaseConnectionString { get; }
 }
 
 
@@ -189,7 +189,7 @@ And we still have basically the same configuration object, except it implements 
 public class MyConfig: IMyConfig, IMyBootstrapConfig
 {
     public int MaxThingCount { get { return Get<int>(); } }        
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     public MyConfig()

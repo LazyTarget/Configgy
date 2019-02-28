@@ -36,8 +36,10 @@ public class MyConfig: Config, IMyConfig
 {   
     [DefaultValue(100)] //assign a default value.
     public int MaxThingCount { get { return Get<int>(); } }
+
     [DefaultValue("Server=server;Database=db;User Id=usr;Password=pwd;")] //assign a default value.
-    public string DatabaseConectionString { get { return Get<string>(); } }        
+    public string DatabaseConnectionString { get { return Get<string>(); } }        
+
     public DateTime WhenToShutdown { get { return Get<DateTime>(); } }
     
     //use expression bodied statements
